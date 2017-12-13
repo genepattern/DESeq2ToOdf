@@ -1,0 +1,32 @@
+#txt2odf
+#Wed Dec 13 20:35:57 UTC 2017
+JVMLevel=3
+LSID=urn\:lsid\:8080.gpserver.ip-172-31-26-71.ip-172-31-26-71.ec2.internal\:genepatternmodules\:23\:1.0.1
+author=Edwin Juarez;GenePattern - Mesirov Lab
+categories=Data Format Conversion
+commandLine=\ \ <python_3.6> <libdir>txt2odf.py -t <txt_file>
+cpuType=any
+description=This module turns a TXT file into an ODF file which can be used with other GenePattern Modules.
+fileFormat=odf
+language=Python
+name=txt2odf
+os=any
+p1_MODE=IN
+p1_TYPE=FILE
+p1_default_value=
+p1_description=The text file to be reformated
+p1_fileFormat=txt
+p1_flag=-t
+p1_name=txt_file
+p1_numValues=0..1
+p1_optional=
+p1_prefix=
+p1_prefix_when_specified=
+p1_type=java.io.File
+p1_value=
+privacy=public
+quality=development
+taskDoc=
+taskType=Data Format Conversion
+userid=edjuaro
+version=Initial Version
