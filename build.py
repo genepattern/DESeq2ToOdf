@@ -52,7 +52,7 @@ path_to_archive = "archive/"+module_name+"."+current_version+".zip"
 path_to_current = "archive/current/"+module_name+"."+current_version+".zip"
 
 # path_to_src = "src"
-what_to_zip = "src/manifest src/txt2odf.py src/test_script.py"
+what_to_zip = "src/manifest src/txt2odf.py src/test_script.py src/txt2odf_functions.py"
 
 # Saving to the archive:
 print("Zipping to archive")

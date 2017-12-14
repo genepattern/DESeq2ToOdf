@@ -3,19 +3,52 @@ import sys
 
 def parse_arguments(args=sys.argv):
     txt_file = None
+    prune_gct = False
+    gct = None
+    cls = None
 
     arg_n = len(args)
     if arg_n == 1:
         sys.exit("Error message: No files were provided. This module needs a GCT and a CLS file to work.")
     elif arg_n == 2:
         txt_file = args[1]
-        print("Using txt_file=", txt_file)
-    elif arg_n > 2:
-        txt_file = args[1]
-        print("Using txt_file=", txt_file)
-        print("Extra parameters were passed and promptly ignored!")
+        prune_gct = False
+        gct = None
+        cls = None
 
-    return txt_file
+        print("Using txt_file=", txt_file)
+        print("Using prune_gct=", prune_gct, '(default)')
+        print("Using gct=", gct, '(default)')
+        print("Using cls=", cls, '(default)')
+    elif arg_n == 3:
+        txt_file = args[1]
+        prune_gct = eval(args[2])
+        gct = None
+        cls = None
+        print("Using txt_file=", txt_file)
+        print("Using prune_gct=", prune_gct)
+        print("Using gct=", gct, '(default)')
+        print("Using cls=", cls, '(default)')
+    elif arg_n == 4:
+        txt_file = args[1]
+        prune_gct = eval(args[2])
+        gct = args[3]
+        cls = None
+        print("Using txt_file=", txt_file)
+        print("Using prune_gct=", prune_gct)
+        print("Using gct=", gct)
+        print("Using cls=", cls, '(default)')
+    elif arg_n == 5:
+        txt_file = args[1]
+        prune_gct = eval(args[2])
+        gct = args[3]
+        cls = args[4]
+        print("Using txt_file=", txt_file)
+        print("Using prune_gct=", prune_gct)
+        print("Using gct=", gct)
+        print("Using cls=", cls)
+
+    return txt_file, prune_gct, gct, cls
 
 
 def df2odf(data_df, vals, file_name='noname.odf'):
