@@ -3,18 +3,18 @@
 # OR using gp-beta-ami:
 # ant -f ${GPUNIT_HOME}/build.xml -Dgpunit.diffStripTrailingCR="--strip-trailing-cr" -Dgp.host="gp-beta-ami.genepattern.org" -Dgp.url="https://gp-beta-ami.genepattern.org" -Dgp.user="edjuaro" -Dgp.password="**PUT_PASSWORD_HERE" -Dgpunit.testfolder=`pwd` gpunit
 
-name: txt2odf - Basic test
-description: (no description)
-module: HierarchicalClustering
+name: "txt2odf - Basic test"
+module: txt2odf
 params:
-       txt_file: "../data/long_results.txt"
-       prune_gct: "True"
-       gct: "../data/long_gct.gct"
-       cls: "../data/BRCA_40_samples.cls"
+    txt_file: "input/long_results.txt"
+    prune_gct: "True"
+    gct: "input/long_gct.gct"
+    cls: "input/BRCA_40_samples.cls"
 assertions:
-        diffCmd: diff <%gpunit.diffStripTrailingCR%> -q
-        files:
-            "long_results.odf":
-                diff: "output/basic_test/long_results.odf"
-            "long_results_pruned.gct":
-                diff: "output/basic_test/long_results_pruned.gct"
+    files:
+        "long_results.odf":
+            # custom diff, ignore lines 6 and 7
+            diffCmd: "bash diff-skip-lines.sh 6,7d"
+            diff: "output/basic_test/long_results.odf"
+        "long_results_pruned.gct":
+            diff: "output/basic_test/long_results_pruned.gct"
