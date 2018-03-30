@@ -1,7 +1,7 @@
 #txt2odf
 #Wed Dec 13 23:47:34 UTC 2017
 JVMLevel=
-LSID=urn\:lsid\:broad.mit.edu\:cancer.software.genepattern.module.analysis\:00372\:1.1.0
+LSID=urn\:lsid\:broad.mit.edu\:cancer.software.genepattern.module.analysis\:00372\:2.0.0
 author=Edwin Juarez;GenePattern - Mesirov Lab
 categories=Data Format Conversion
 commandLine=<python_3.6> <libdir>txt2odf.py <txt_file> <prune_gct> <gct> <cls>
@@ -68,4 +68,4 @@ quality=development
 taskDoc=doc.html
 taskType=Data Format Conversion
 userid=edjuaro
-version=Initial Version
+version=First production release
