@@ -1,4 +1,6 @@
+#updated after building 2.5
+#Fri, 30 Mar 2018 13:49:39 -0400
 #updated after building 1.4
 #Fri, 30 Mar 2018 13:17:53 -0400
 #update release version number
-build.number=2
+build.number=3
