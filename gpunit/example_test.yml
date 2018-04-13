@@ -1,3 +1,10 @@
+#
+# Note: this test uses a custom diff command,
+#   see diffCmd below
+#   It will only work when you launch GpUnit
+#   from this working directory
+#
+
 name: "txt2odf - Example test"
 module: txt2odf
 params:
