@@ -1,3 +1,7 @@
+#
+# Note: this test uses a custom diff command
+#
+
 name: "txt2odf - Example test"
 module: txt2odf
 params:
@@ -9,7 +13,7 @@ assertions:
     files:
         "short_results.odf":
             # custom diff, ignore lines 6 and 7
-            diffCmd: "bash diff-skip-lines.sh 6,7d"
+            diffCmd: "./diff-skip-lines.sh 6,7d"
             diff: "output/basic_test/short_results.odf"
         "short_results_pruned.gct":
             diff: "output/basic_test/short_results_pruned.gct"

@@ -3,6 +3,10 @@
 # OR using gp-beta-ami:
 # ant -f ${GPUNIT_HOME}/build.xml -Dgpunit.diffStripTrailingCR="--strip-trailing-cr" -Dgp.host="gp-beta-ami.genepattern.org" -Dgp.url="https://gp-beta-ami.genepattern.org" -Dgp.user="edjuaro" -Dgp.password="**PUT_PASSWORD_HERE" -Dgpunit.testfolder=`pwd` gpunit
 
+#
+# Note: this test uses a custom diff command
+#
+
 name: "txt2odf - Basic test"
 module: txt2odf
 params:
@@ -14,7 +18,7 @@ assertions:
     files:
         "long_results.odf":
             # custom diff, ignore lines 6 and 7
-            diffCmd: "bash diff-skip-lines.sh 6,7d"
+            diffCmd: "./diff-skip-lines.sh 6,7d"
             diff: "output/basic_test/long_results.odf"
         "long_results_pruned.gct":
             diff: "output/basic_test/long_results_pruned.gct"
