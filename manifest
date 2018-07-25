@@ -1,10 +1,11 @@
 #txt2odf
 #Wed Dec 13 23:47:34 UTC 2017
 JVMLevel=
-LSID=urn\:lsid\:broad.mit.edu\:cancer.software.genepattern.module.analysis\:00372\:2.0.0
+LSID=urn\:lsid\:broad.mit.edu\:cancer.software.genepattern.module.analysis\:00372\:2.1
 author=Edwin Juarez;GenePattern - Mesirov Lab
 categories=Data Format Conversion
 commandLine=<python_3.6> <libdir>txt2odf.py <txt_file> <prune_gct> <gct> <cls>
+job.docker.image=genepattern/docker-python36:0.5
 cpuType=any
 description=This module turns a TXT file into an ODF file which can be used with other GenePattern Modules.
 fileFormat=odf
@@ -68,4 +69,4 @@ quality=production
 taskDoc=doc.html
 taskType=Data Format Conversion
 userid=edjuaro
-version=First production release
+version=Cleaning up the release
